@@ -5,8 +5,8 @@ import productsData from "./products_for_mongodb.json";
 // const productsData: any[] = [];
 
 // --- CONFIGURATION ---
-const API_BASE_URL = 'http://127.0.0.1:5000/api';
-const ROOT_URL = 'http://127.0.0.1:5000';
+const API_BASE_URL = 'https://visual-matcher-api-6qln.onrender.com/api';
+const ROOT_URL = 'https://visual-matcher-api-6qln.onrender.com';
 const ITEMS_PER_PAGE = 25;
 
 interface Product {
@@ -19,7 +19,7 @@ interface Product {
     articleType: string;
 }
 
-const mapProductData = (item: any, index: number): Product => ({
+const mapProductData = (item: any): Product => ({
     id: String(item.id),
     name: item.productDisplayName,
     category: item.articleType, 
